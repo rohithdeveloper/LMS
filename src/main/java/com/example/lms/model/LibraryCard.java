@@ -22,42 +22,40 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Table(name="Book")
 @Entity
+@Table(name = "library_card")
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
 public class LibraryCard {
-	@Id
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="Card_No")
+    @Column(name = "card_no")
     private int cardno;
 
-	@Column(name="Card_Status")
     @Enumerated(EnumType.STRING)
+    @Column(name = "card_status")
     private CardStatus status;
 
-	@Column(name="Card_CreationDate")
     @CreationTimestamp
+    @Column(name = "creation_date")
     private Date creationDate;
-	
-	@Column(name="Card_UpdationDate")
+
     @UpdateTimestamp
+    @Column(name = "updation_date")
     private Date updationDate;
-	
-	@OneToOne
-    @JoinColumn
-    Student student;
-	
-	@OneToMany(mappedBy = "card",cascade = CascadeType.ALL)
+
+    @OneToOne
+    @JoinColumn(name = "student_id")
+    private Student student;
+
+    @OneToMany(mappedBy = "card",cascade = CascadeType.ALL)
     List<Transaction> transaction = new ArrayList<>();
 	
     @OneToMany(mappedBy = "card",cascade = CascadeType.ALL)
     List<Book> bookIssued = new ArrayList<>();
-
 }

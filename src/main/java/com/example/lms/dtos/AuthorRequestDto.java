@@ -16,5 +16,6 @@ public class AuthorRequestDto {
 	private String mobno;
 	private String email;
 	///private List<BookRequestDto> books;
+	 private List<BookRequestDto> books; // List of books
 
 }

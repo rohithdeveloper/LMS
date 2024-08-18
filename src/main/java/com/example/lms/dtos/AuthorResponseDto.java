@@ -14,5 +14,5 @@ public class AuthorResponseDto {
 	private String name;
     private String email;
     //private List<BookRequestDto> books;
-
+    private List<BookResponseDto> books; // List of books
 }

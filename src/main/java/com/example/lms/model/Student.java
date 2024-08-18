@@ -13,36 +13,35 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
+@Table(name = "student")
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
-@Table(name="Student")
 public class Student {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="Student_Id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "student_id")
 	private int sId;
-	
-	@Column(name="Student_Name")
+
+	@Column(name = "name")
 	private String sname;
-	
-	@Column(name="Student_Age")
+
+	@Column(name = "age")
 	private int sage;
 
 	@Enumerated(EnumType.STRING)
-	@Column(name="Student_Department")
+	@Column(name = "department")
 	private Department department;
-	
-	@Column(name="Student_Email")
+
+	@Column(name = "email")
 	private String email;
 
-	@OneToOne(mappedBy = "student",cascade = CascadeType.ALL)
-    LibraryCard card;
+	@OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
+	private LibraryCard card;
 }
+
