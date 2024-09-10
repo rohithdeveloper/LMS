@@ -1,0 +1,111 @@
+Project Overview: IKEA Retail Website (IRW)
+Client: IKEA-IRW, Sweden
+Role: Java Developer (Consultant)
+Duration: 1st June 2018 to 29th March 2019
+
+Project Description:
+The IKEA Retail Website (IRW) is a comprehensive e-commerce platform that aims to provide a seamless shopping experience for IKEA’s customers globally. It manages a large catalog of home furnishing products and facilitates efficient order processing, handling multiple subservices for product information, sales, payments, and customer service.
+
+Key Features and Functions:
+Product Catalog
+
+Function: Enables customers to browse IKEA’s extensive product range.
+Details: Displays product specifications, images, and availability.
+Shopping Cart and Order Placement
+
+Function: Allows users to add products to a shopping cart and complete the checkout process.
+Details: Manages the entire order process, including payment and confirmation.
+Integrated Subservices
+
+Retail Range: Manages product information and catalog updates.
+Sales and Payment: Processes orders and handles payment transactions.
+Customer Service: Provides support for customer inquiries and issues.
+Common Framework
+
+Function: A unified framework integrates the subservices for consistent operation across the platform.
+Technologies Used:
+WebSphere Commerce Suite (WCS): E-commerce platform for managing the retail website.
+Spring Boot: Framework for developing the web application with a focus on simplicity and rapid development.
+Java 8 Streams: Efficient data processing using functional programming.
+JPA (Java Persistence API): For data access and management, replacing Hibernate.
+Oracle: Database system for application data storage and management.
+GIT: Version control system for code management and collaboration.
+Roles and Responsibilities:
+Troubleshooting Production Issues:
+Address and resolve production issues within the agreed SLA timeframes.
+
+Bug Fixing:
+Identify and fix bugs related to recurring maintenance problems.
+
+Code Fixes for Problem Requests (PRs):
+Implement code changes to address specific problem requests assigned by the team.
+
+Root Cause Analysis:
+Investigate complex issues, especially high-priority bugs and releases, to identify root causes.
+
+Use Cases and Scenarios:
+Product Catalog: Browsing Products
+
+Use Case: As a customer, I want to browse IKEA’s product range to explore items of interest.
+Steps:
+Customer accesses the product catalog.
+System displays product categories (e.g., Living Room, Kitchen).
+Customer selects a category to view products.
+System displays product details (e.g., name, price, thumbnail).
+Customer clicks on a product for more information.
+Shopping Cart: Adding Items
+
+Use Case: As a customer, I want to add products to my shopping cart to purchase later.
+Steps:
+Customer selects a product from the catalog.
+Customer chooses options (e.g., size, color, quantity).
+Customer clicks “Add to Cart.”
+System updates the shopping cart with the selected product.
+Customer reviews the added items in the cart.
+Checkout Process
+
+Use Case: As a customer, I want to complete the checkout process to finalize my purchase.
+Steps:
+Customer reviews items in the shopping cart.
+Customer enters shipping and billing information.
+Customer selects payment method.
+System processes the payment and confirms the order.
+Customer receives an order confirmation.
+Spring Boot Concepts in Action:
+Selecting a Product
+
+REST Controllers (@RestController): Handle HTTP requests for product details.
+Service Layer (@Service): Manage business logic for retrieving product data.
+Repositories (@Repository): Interface with the database for product information.
+DTOs (Data Transfer Objects): Transfer product details between layers.
+Adding Product to Cart
+
+REST Controllers (@RestController): Define endpoints for adding products to the cart.
+Service Layer (@Service): Handle adding items and managing cart persistence.
+Session Management: Use HttpSession to store cart data for the user session.
+Repositories (@Repository): Manage data access for cart operations.
+DTOs: Represent cart state, including items and quantities.
+Completing the Checkout Process
+
+REST Controllers (@RestController): Manage checkout and payment requests.
+Service Layer (@Service): Handle order validation, payment, and updates.
+Repositories (@Repository): Store order and payment information.
+Integration with Payment Gateway: Integrate with external payment systems (e.g., Stripe, PayPal).
+Transaction Management (@Transactional): Ensure operations like order placement and payment are atomic.
+Security (Spring Security): Protect checkout and payment endpoints.
+Exception Handling (@ControllerAdvice): Provide error handling for issues like payment failures.
+Summary:
+The IKEA Retail Website (IRW) project focused on delivering a smooth e-commerce experience by leveraging modern technologies such as Spring Boot and JPA. As a Java Developer, my responsibilities included troubleshooting, bug fixing, and enhancing the platform to ensure performance, reliability, and a seamless user experience.
+
+
+
+
+
+
+
+
+
+
+
+
+ChatGPT can
